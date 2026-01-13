@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Admin Login</title>
+  <style>
+    body { font-family: Arial; background: #f4f6f8; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    #loginCard { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; }
+    h2 { text-align: center; margin-bottom: 20px; }
+    input { width: 100%; padding: 10px; margin: 8px 0; border-radius: 4px; border: 1px solid #ccc; }
+    button { width: 100%; padding: 10px; background: #3498db; border: none; color: white; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+    button:hover { background: #2980b9; }
+    #loginError { color: red; text-align: center; margin-top: 10px; }
+  </style>
 </head>
 <body>
-
-<h2>Admin Login</h2>
-
-<input type="text" placeholder="Username"><br><br>
-<input type="password" placeholder="Password"><br><br>
-
-<button>Login</button>
-
+  <div id="loginCard">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div id="loginError"></div>
+  </div>
+  <script src="js/auth.js"></script>
 </body>
 </html>
