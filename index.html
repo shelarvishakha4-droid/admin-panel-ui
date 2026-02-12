@@ -1,75 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    #loginCard {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 100%;
-      max-width: 350px;
-    }
+<style>
 
-    h2 {
-      text-align: center;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f4f6fb;   /* Light soft background */
+  padding:20px;
+}
 
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #667eea;
-      border: none;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+#loginCard{
+  width:100%;
+  max-width:380px;
+  padding:40px 30px;
+  border-radius:15px;
+  background:#ffffff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.6s ease;
+}
 
-    button:hover {
-      background: #5a67d8;
-    }
+h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-weight:600;
+  color:#333;
+}
 
-    #loginError {
-      color: red;
-      text-align: center;
-      margin-top: 10px;
-    }
-  </style>
+.input-group{
+  margin-bottom:20px;
+}
+
+input{
+  width:100%;
+  padding:12px 15px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:14px;
+  transition:0.3s;
+}
+
+input:focus{
+  border-color:#667eea;
+  box-shadow:0 0 0 3px rgba(102,126,234,0.15);
+  outline:none;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#667eea;
+  color:white;
+  font-weight:500;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#5a67d8;
+}
+
+#loginError{
+  margin-top:15px;
+  text-align:center;
+  font-size:14px;
+  color:#e74c3c;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(15px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* Mobile */
+@media (max-width:400px){
+  #loginCard{
+    padding:30px 20px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <div id="loginCard">
-    <h2>Admin Login</h2>
+<div id="loginCard">
+  <h2>Admin Login</h2>
+
+  <div class="input-group">
     <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Login</button>
-    <div id="loginError"></div>
   </div>
 
-  <script src="js/auth.js"></script>
+  <div class="input-group">
+    <input type="password" id="password" placeholder="Password">
+  </div>
+
+  <button onclick="login()">Login</button>
+  <div id="loginError"></div>
+</div>
+
+<script src="js/auth.js"></script>
+
 </body>
 </html>
