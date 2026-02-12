@@ -1,8 +1,11 @@
-/* Dashboard layout */
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f9f9f9;
+  margin: 0;
+  background: #f4f6f9;
+}
+
+.container {
+  padding: 20px;
 }
 
 /* Header */
@@ -13,117 +16,132 @@ body {
   margin-bottom: 20px;
 }
 
-/* Logout button */
 .logout-btn {
-  background-color: #007bff;
+  background: #ff4d4f;
   color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
   border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
   cursor: pointer;
 }
-.logout-btn:hover {
-  background-color: #0056b3;
-}
 
-/* Summary Cards */
+/* Cards */
 .cards {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
 }
+
 .card {
-  background-color: #cce5ff;
+  flex: 1;
+  background: white;
   padding: 15px;
-  border-radius: 5px;
-  width: 120px;
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
-.card h3 {
-  margin: 0 0 5px 0;
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.controls input,
+.controls select {
+  padding: 8px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-btn {
+  background: #28a745;
+  color: white;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+/* Action Buttons Proper Spacing */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
-}
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-table th {
-  background-color: #007bff;
-  color: white;
-}
-table tr:hover {
-  background-color: #f1f1f1;
+  background: white;
 }
 
-/* Status colors */
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #667eea;
+  color: white;
+}
+
 .status-active {
   color: green;
   font-weight: bold;
 }
+
 .status-inactive {
   color: red;
   font-weight: bold;
 }
 
-/* Message */
 #message {
+  margin: 10px 0;
   font-weight: bold;
 }
-/* General Button Styles */
-button {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.3s;
-}
 
-/* Specific Buttons */
-button.logout-btn {
-  background-color: #ff4d4f;
-  color: white;
-}
-button.logout-btn:hover {
-  background-color: #c70000;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
 
-button.add-btn {
-  background-color: #28a745;
-  color: white;
-}
-button.add-btn:hover {
-  background-color: #218838;
-}
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-button.edit-btn {
-  background-color: #ffc107;
-  color: black;
-}
-button.edit-btn:hover {
-  background-color: #e0a800;
-}
+  .cards {
+    flex-direction: column;
+  }
 
-button.delete-btn {
-  background-color: #dc3545;
-  color: white;
-}
-button.delete-btn:hover {
-  background-color: #a71d2a;
-}
+  .controls {
+    flex-direction: column;
+  }
 
-button.toggle-btn {
-  background-color: #17a2b8;
-  color: white;
-}
-button.toggle-btn:hover {
-  background-color: #117a8b;
-}
+  .action-buttons {
+    flex-direction: column;
+  }
 
+  button {
+    width: 100%;
+  }
+}
