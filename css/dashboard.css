@@ -75,10 +75,15 @@ button {
   color: white;
 }
 
-/* Action Buttons Proper Spacing */
+.status-btn {
+  background: #667eea;
+  color: white;
+}
+
+/* Action Buttons Layout */
 .action-buttons {
   display: flex;
-  gap: 8px;
+  gap: 5px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -105,15 +110,10 @@ th {
   color: white;
 }
 
-.status-active {
-  color: green;
-  font-weight: bold;
-}
-
-.status-inactive {
-  color: red;
-  font-weight: bold;
-}
+/* Status badges */
+.status-active { color: green; font-weight: bold; }
+.status-inactive { color: red; font-weight: bold; }
+.status-approved { color: orange; font-weight: bold; }
 
 #message {
   margin: 10px 0;

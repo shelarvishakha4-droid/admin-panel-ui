@@ -12,18 +12,18 @@
   <div class="container">
 
     <div class="header-row">
-      <h2>Admin Dashboard</h2>
+      <h2>Welcome, Admin!</h2>
       <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
 
     <div class="cards">
       <div class="card">
         <h3>Total Users</h3>
-        <p>10</p>
+        <p id="usersCount">10</p>
       </div>
       <div class="card">
         <h3>Total Records</h3>
-        <p id="recordsCount">2</p>
+        <p id="recordsCount">0</p>
       </div>
       <div class="card">
         <h3>Reports</h3>
@@ -46,6 +46,7 @@
         <option value="All">All</option>
         <option value="Active">Active</option>
         <option value="Inactive">Inactive</option>
+        <option value="Approved">Approved</option>
       </select>
     </div>
 
